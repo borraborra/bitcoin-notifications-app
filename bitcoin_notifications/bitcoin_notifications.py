@@ -1,5 +1,8 @@
 # coding: utf-8
 
+from __future__ import division
+from __future__ import print_function
+
 # We want to get the latest price from the Coinmarketcap API.
 
 # The suspects ...

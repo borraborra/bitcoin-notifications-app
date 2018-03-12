@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Bitcoin Price Change Notifications Application
 
-You can use the [editor on GitHub](https://github.com/wildlyclassyprince/bitcoin-notifications-app/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A Python application that sends a notification on the price of Bitcoin based on a tutorial published on [Link](https://realpython.com/blog/python/python-bitcoin-ifttt/?__s=iyvx2pojonk7evuo5jrn). 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## How it works
+The application makes use of  HTTP requests and sends them using the Python `requests` package. 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+It also makes use of webhooks and connects them to external services, i.e., phone notifications and Telegram messages, by using the IFTTT ("if this, then that") web service that bridges the gap between different apps and devices.
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+get_latest_bitcoin_price()
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Gets and returns the Bitcoin price from **Coinmarketcap.com**
 
-### Jekyll Themes
+```markdown
+post_ifttt_webhook(event, value)
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wildlyclassyprince/bitcoin-notifications-app/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Defines the payload send to IFTTT service, which is a POST request to the webhook URL.
 
-### Support or Contact
+```markdown
+format_bitcoin_history(bitcoin_history)
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Formats the date of retrieval into a string: 'day.month.year hour:minutes'. It also reformats price logs after 5 entries.

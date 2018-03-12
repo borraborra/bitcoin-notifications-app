@@ -2,9 +2,11 @@
 
 # We want to get the latest price from the Coinmarketcap API.
 
-# The usual suspects ...
+# The suspects ...
 import requests
 import time
+
+# The accomplices ...
 from datetime import datetime
 
 BITCOIN_API_URL = 'https://api.coinmarketcap.com/v1/ticker/bitcoin/'

@@ -1,6 +1,6 @@
 ## Bitcoin Price Change Notifications Application
 
-A Python application that sends a notification on the price of Bitcoin based on a tutorial published on **[realpython.com]**(https://realpython.com/blog/python/python-bitcoin-ifttt/?__s=iyvx2pojonk7evuo5jrn). 
+A Python application that sends a notification on the price of Bitcoin based on a tutorial published on [realpython.com](https://realpython.com/blog/python/python-bitcoin-ifttt/?__s=iyvx2pojonk7evuo5jrn). 
 
 ## How it works
 The application makes use of  HTTP requests and sends them using the Python `requests` package. 
@@ -11,7 +11,7 @@ It also makes use of webhooks and connects them to external services, i.e., phon
 get_latest_bitcoin_price()
 ```
 
-Gets and returns the Bitcoin price from **[Coinmarketcap.com]**(coinmarketcap.com)
+Gets and returns the Bitcoin price from [Coinmarketcap.com](coinmarketcap.com)
 
 ```markdown
 post_ifttt_webhook(event, value)

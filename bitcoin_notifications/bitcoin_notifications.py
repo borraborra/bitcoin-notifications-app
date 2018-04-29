@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
 # We want to get the latest price from the Coinmarketcap API.
 
@@ -8,7 +8,7 @@ import time
 from datetime import datetime
 
 BITCOIN_API_URL = 'https://api.coinmarketcap.com/v1/ticker/bitcoin/'
-IFTTT_WEBHOOKS_URL = 'https://maker.ifttt.com/trigger/bitcoin_emergency_alert/with/key/vRNOSa96SSQO8fcIu1Tto'
+IFTTT_WEBHOOKS_URL = 'https://maker.ifttt.com/trigger/bitcoin_emergency_alert/with/key/mykey'
 
 def get_latest_bitcoin_price():
     response, response_json = requests.get(BITCOIN_API_URL), response.json()
